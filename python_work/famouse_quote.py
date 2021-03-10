@@ -1,0 +1,1 @@
+print('Cesar Chavez once said, "We draw our strength from the very dispair in which we have been forced to live. We shall endure."')
