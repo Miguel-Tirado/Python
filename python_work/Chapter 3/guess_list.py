@@ -14,7 +14,7 @@ guesst.append('Clara')
 for i in range(len(guesst)):
     print(f"the new list start with {guesst[i].title()}.")
 print("It looks like i can only invite 2 people since my new table wont make it on time")
-for i in range(0,(len(guesst)-2)):
+for i in range(4):
     denied = guesst.pop()
     print(f"Im sorry {denied}, but we cant invite you anymore to dinner.")
 for i in range(len(guesst)):
