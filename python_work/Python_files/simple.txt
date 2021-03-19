@@ -1,0 +1,5 @@
+hello my name is miguel tirado
+this is a simple text file.
+its being used to test pythons file reading and writing capabilities.
+Im exited to learn what pyhton can do with this file.
+I hope your day is going well. 
