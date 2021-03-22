@@ -17,6 +17,11 @@ for alien_num in range(30):
     new_alien = {'color' : 'green', 'points': 5}
     more_aliens.append(new_alien)
 
+for alien in more_aliens[:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
 # show the first 10 aliens 
 for alien in more_aliens[:10]:
     print(alien)
