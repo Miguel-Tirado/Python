@@ -1,0 +1,5 @@
+In Python you can do many cool things!
+Such as building your own calculator.
+Build your own video games.
+You can also analyze data and display them on a GUI.
+The possibilities are endless, its all up to your determination to make it work.
