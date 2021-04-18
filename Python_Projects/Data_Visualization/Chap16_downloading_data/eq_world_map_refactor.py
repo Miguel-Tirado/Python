@@ -8,19 +8,17 @@ with open(filename) as f:
     all_eq_data = json.load(f)
 
 # there is 158 total earthquakes recoreded 
+title = all_eq_data['metadata'] ['title']
 all_eq_dicts = all_eq_data['features']
 print(len(all_eq_dicts))
 
+
 mags, lons, lats, hover_texts = [], [], [], []
 for eq_dict in all_eq_dicts:
-    mag = eq_dict['properties']['mag']
-    lon = eq_dict['geometry']['coordinates'][0]
-    lat = eq_dict['geometry']['coordinates'][1]
-    title = eq_dict['properties']['title']
-    mags.append(mag)
-    lons.append(lon)
-    lats.append(lat)
-    hover_texts.append(title)
+    mags.append(eq_dict['properties']['mag'])
+    lons.append(eq_dict['geometry']['coordinates'][0])
+    lats.append(eq_dict['geometry']['coordinates'][1])
+    hover_texts.append(eq_dict['properties']['title'])
 
 # Map the earthquakes 
 # change the size of the markers depending on the magnitude of the earth quake 
@@ -37,7 +35,8 @@ data = [{
        'colorbar' : {'title' : 'Magnitude'},
     },
 }]
-my_layout = Layout(title="Global Eathquakes")
+
+my_layout = Layout(title=title)
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename='global_earthquakes.html')
