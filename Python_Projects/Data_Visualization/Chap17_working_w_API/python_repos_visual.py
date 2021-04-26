@@ -15,6 +15,7 @@ print(f"Status code: {r.status_code}")
 responce_dict = r.json()
 repo_dicts = responce_dict['items']
 stars, labels, repo_links = [], [], []
+
 for repo_dict in repo_dicts:
     repo_name = repo_dict['name']
     repo_url = repo_dict['html_url']
